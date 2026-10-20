@@ -261,8 +261,17 @@ h1 { margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.08; letter-s
 .bw-ipa { font-size: 11px; color: var(--muted); }
 .bw-mean { font-size: 13px; color: var(--ink); font-weight: 600; }
 
+
 @media (max-width: 600px) {
-  .beauty-list { gap: 8px; }
-  .beauty-list li { min-width: calc(50% - 6px); padding: 10px 12px 8px; }
-  .bw-word { font-size: 22px; }
+  :root { --bouquet-size: clamp(260px, calc(100vw - 32px), 460px); }
+  .beauty-words { margin-bottom: 0; }
+  .beauty-kicker { font-size: 12px; margin-bottom: 8px; }
+  .beauty-list {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 6px; padding: 0 2px;
+  }
+  .beauty-list li { min-width: 0; padding: 8px 4px 7px; align-items: center; }
+  .bw-word { font-size: 17px; overflow-wrap: anywhere; }
+  .bw-ipa { font-size: 9.5px; }
+  .bw-mean { font-size: 11px; line-height: 1.3; }
 }
